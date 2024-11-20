@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htm-GA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        // Llama al contador de CountAPI
+        fetch('https://api.countapi.xyz/get/mi-sitio-web/ventas')
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('contador-ventas').textContent = data.value;
+          });
+    </script>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <h2 style="font-size: 1.5rem; color: #FF8A00;">VENTAS TOTALES:</h2>
+    
+        <!-- Div donde aparecerá el número del contador -->
+        <div id="contador-ventas" style="font-size: 3rem; font-weight: bold; color: #00b5e3; padding: 10px;">0</div>
+    </div>
+
+    <!-- barra de progreso -->
+
+
+    <!-- contenedor-cards -->
+    <div class="container__cards">
+       <!-- card-presentación-embajadora -->
+        <div class="card">
+           <div class="cover"> 
+              <img src="./img/silvia.png" alt="silvia">
+              
+              <!-- fonfo -->
+              <div  class="img__back"></div>
+           </div>
+
+
+            <div class="description">
+             <h2>Silvia Olmedo</h2>
+             <p class="principal">Embajadora de Fundación Internacional Granito de Arena.</p>
+             
+             <span class="hide" id="hideText">
+                <p class="2">Por su compromiso social y labor humanitaria, psicóloga por la Universidad Autónoma de Madrid, colegiada por el colegio de psicólogos de Madrid, sexóloga, experta en la promoción de la salud mental y autora de 5 best sellers; una mujer que sin duda alguna ama su trabajo.</p>
+             </span>
+
+             <button class="ReadMore_btn" id="hideText_btn">Leer más</button>
+            </div>
+        </div>
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
